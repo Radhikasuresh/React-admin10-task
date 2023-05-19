@@ -5,15 +5,15 @@ import ProgressCard from '../ComponentsPage/CardsPage/ProgressCard'
 const Row3 = () => {
   const ProgressData = [
     {
-      content: 'Server Migration',
-      percentage: '20%',
+      content: 'No.Of Failers',
+      percentage: '15%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-danger',
       width: '20%',
       ariavalue: '20',
     },
     {
-      content: 'Sales Tracking',
+      content: 'Irregular Attendance',
       percentage: '40%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-warning',
@@ -21,7 +21,7 @@ const Row3 = () => {
       ariavalue: '40',
     },
     {
-      content: 'Customer Database',
+      content: 'Pass Percentage',
       percentage: '60%',
       cardType: 'progress mb-4',
       barType: 'progress-bar',
@@ -29,7 +29,7 @@ const Row3 = () => {
       ariavalue: '60',
     },
     {
-      content: 'Payout Details',
+      content: 'Regular Attendance',
       percentage: '80%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-info',
@@ -37,7 +37,7 @@ const Row3 = () => {
       ariavalue: '80',
     },
     {
-      content: 'Account Setup',
+      content: 'Assignment Submitted',
       percentage: 'Complete!',
       cardType: 'progress',
       barType: 'progress-bar bg-success',
@@ -48,50 +48,50 @@ const Row3 = () => {
   const colorCardData = [
     {
       cardType: 'card bg-primary text-white shadow',
-      cardHeading: 'Primary',
-      content: '#4e73df',
+      cardHeading: 'English',
+      content: 'Pass Percentage:85%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-success text-white shadow',
-      cardHeading: 'Success',
-      content: '#1cc88a',
+      cardHeading: 'Mathematics',
+      content: 'Pass Percentage:75%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-info text-white shadow',
-      cardHeading: 'Info',
-      content: '#36b9cc',
+      cardHeading: 'Chemistry',
+      content: 'Pass Percentage:80%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-warning text-white shadow',
-      cardHeading: 'Warning',
-      content: '#f6c23e',
+      cardHeading: 'Physics',
+      content: 'Pass Percentage:90%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-danger text-white shadow',
-      cardHeading: 'Danger',
-      content: '#e74a3b',
+      cardHeading: 'History',
+      content: 'Pass Percentage:70%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-secondary text-white shadow',
-      cardHeading: 'Secondary',
-      content: '#858796',
+      cardHeading: 'French',
+      content: 'Pass Percentage:95%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-light text-black shadow',
-      cardHeading: 'Light',
-      content: '#f8f9fc',
+      cardHeading: 'Computer Science',
+      content: 'Pass Percentage:90%',
       textColor: 'text-black-50 small',
     },
     {
       cardType: 'card bg-dark text-white shadow',
-      cardHeading: 'Dark',
-      content: '#5a5c69',
+      cardHeading: 'Biology',
+      content: 'Pass Percentage:85%',
       textColor: 'text-white-50 small',
     },
   ]
@@ -145,18 +145,9 @@ const Row3 = () => {
                 alt="..."
               />
             </div>
-            <p>
-              Add some quality, svg illustrations to your project courtesy
-              of&nbsp;
-              <a target="_blank" rel="nofollow" href="https://undraw.co/">
-                unDraw
-              </a>
-              , a constantly updated collection of beautiful svg images that you
-              can use completely free and without attribution!
+            <p>Education helps a person to get knowledge and improve confidence in life. It can help you improve your career and your personal growth. An educated person can become a great citizen in society.
             </p>
-            <a target="_blank" rel="nofollow" href="https://undraw.co/">
-              Browse Illustrations on unDraw &rarr;
-            </a>
+           
           </div>
         </div>
 
@@ -164,19 +155,16 @@ const Row3 = () => {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-primary">
+              Knowledge 0Cw
               Development Approach
             </h6>
           </div>
           <div className="card-body">
             <p>
-              SB Admin 2 makes extensive use of Bootstrap 4 utility classes in
-              order to reduce CSS bloat and poor page performance. Custom CSS
-              classes are used to create custom components and custom utility
-              classes.
+            They say knowledge is power. Think about it: Your current mentors and the senior leaders you regularly interact with at work likely have a vast knowledge of your company’s products and services and their field of work, and they might even keep up to date with general industry news. The world’s most successful people find ways to incorporate learning into their day-to-day work. 
             </p>
             <p className="mb-0">
-              Before working with this theme, you should become familiar with
-              the Bootstrap framework, especially the utility classes.
+            The ability to acquire knowledge effectively is a skill in itself. It’s the key to opening doors that would otherwise be locked and often controls access to opportunity and advancement in the workplace. 
             </p>
           </div>
         </div>

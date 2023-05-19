@@ -24,7 +24,7 @@ ChartJS.register(
 
 const DonutChart = () => {
   const data = {
-    labels: ['Direct', 'Referral', 'Social'],
+    labels: ['Above 90%', '75% to 90%', 'Below 75%'],
     datasets: [
                 {
                   data: [55, 30, 15],

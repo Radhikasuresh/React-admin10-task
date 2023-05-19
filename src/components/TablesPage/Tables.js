@@ -82,7 +82,7 @@ const Tables = ({ handleOpen,handleOpen1,handleOpen2,open,open1,open2,setOpen,
                           <th>Office</th>
                           <th>Age</th>
                           <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Fees</th>
                         </tr>
                       </thead>
                       <tfoot>
@@ -92,7 +92,7 @@ const Tables = ({ handleOpen,handleOpen1,handleOpen2,open,open1,open2,setOpen,
                           <th>Office</th>
                           <th>Age</th>
                           <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Fees</th>
                         </tr>
                       </tfoot>
                       <tbody>

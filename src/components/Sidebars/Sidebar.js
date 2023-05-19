@@ -59,7 +59,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
       <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div className="sidebar-heading">Interface</div>
+      <div className="sidebar-heading">School Information</div>
 
       {/* <!-- Nav Item - Pages Collapse Menu --> */}
       <li className="nav-item">
@@ -74,7 +74,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
           onClick={handleOpen}
         >
           <i className="fas fa-fw fa-cog" style={{ marginRight: margin }}></i>
-          <span>Components</span>
+          <span>School Info Tracker</span>
         </a>
         <Collapse in={open}>
         <div
@@ -84,21 +84,27 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
           data-parent="#accordionSidebar"
         >
           <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Custom Components:</h6>
-            <Link to="/buttons" style={{ textDecoration: 'none' }}>
+            <h6 className="collapse-header">Information:</h6>
+            <Link to="/Home" style={{ textDecoration: 'none' }}>
               <a className="collapse-item" href="buttons.html">
-                Buttons
+                Students Tracking
               </a>
             </Link>
-            <Link to="/cards" style={{ textDecoration: 'none' }}>
+            <Link to="/Home2" style={{ textDecoration: 'none' }}>
               <a className="collapse-item" href="cards.html">
-                Cards
+                Teachers Tracking
               </a>
             </Link>
           </div>
         </div>
         </Collapse>
       </li>
+         
+          
+          
+          
+      
+
 
       {/* <!-- Nav Item - Utilities Collapse Menu --> */}
       <li className="nav-item">
