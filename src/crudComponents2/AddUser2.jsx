@@ -9,9 +9,9 @@ function AddUser2({UpdateUser2,currentUser2,index2,Adduser2}) {
   name:'',
   email:'',
   password:'',
-  batch:'',
   subject:'',
-  address:''})
+  batch:'',
+ address:''})
 
 const handlechange = (e)=>{
   setUser2 ({...user2,[e.target.name]:e.target.value})
@@ -28,93 +28,7 @@ const handlechange = (e)=>{
             </Link>
           </div>
         </div>
-      </div>
-      {/* <div className="container">
-        <div className="row my-3">
-          <div className="col">
-            <form className="row g-3" >
-              <div className="col-md-6 d-flex gap-2 align-items-center">
-                <label htmlFor="inputName" 
-                className="form-label badge bg-secondary py-2 ">
-                  Name
-                </label>
-                <input type="text"  placeholder="Enter Name"  className="form-control" id="inputName"
-                name="name" value={user2.name} onChange={handlechange} required />
-              </div>
-              
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
-                  Subject
-                </label>
-                <input type="text" placeholder="Enter Subject" className="form-control" id="inputEmail4" 
-                  name="email" value={user2.subject} onChange={handlechange} required />
-              </div>
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
-                  Email
-                </label>
-                <input type="email" placeholder="Enter Email" className="form-control" id="inputEmail4" 
-                  name="email" value={user2.email} onChange={handlechange} required />
-              </div>
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputPassword4"  className="form-label badge bg-secondary py-2">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="inputPassword4"
-                  placeholder="Enter Password"
-                  name="password"
-                  value={user2.password}
-                  onChange={handlechange}
-                  required
-                />
-                <label htmlFor="inputAddress" className="form-label badge bg-secondary py-2">Batch</label>
-                <input  type="text"
-                  className="form-control"
-                  placeholder="Enter the Batch"
-                  value={user2.batch}
-                  onChange={handlechange}/>
-                    <label htmlFor="inputAddress" className="form-label badge bg-secondary py-2">Batch</label>
-                
-              </div>
-              
-              <div className="col-12 d-flex gap-2">
-                <label htmlFor="inputAddress" className="form-label badge bg-secondary py-2">
-                  Address
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputAddress"
-                  placeholder="Enter the Address"
-                  name="address"
-                  value={user2.address}
-                  onChange={handlechange}
-                />
-                
-
-              </div>
-              <input  type="text"
-                  className="form-control"
-                  placeholder="Enter the Batch"
-                  value={user2.batch}
-                  onChange={handlechange}/>
-
-              <div className="col-3 mx-auto btn-group">
-                <button onClick={(e)=>{ e.preventDefault();Adduser2(user2);}} className="btn btn-primary">
-                  ADD
-                </button>
-               { currentUser2?
-                <button className="btn btn-warning" onClick={(e)=>{e.preventDefault();UpdateUser2(user2,index2);}}>
-                  Update
-                </button>:<></>}
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> */}<br></br>
+      </div><br></br>
       <div className="ad-user2">
 
       <label htmlFor="inputName" 

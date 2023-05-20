@@ -22,6 +22,7 @@ function UserLists({userList,DeleteUser,EditUser}) {
 <h4 className="home_name">{user.name}</h4>
 <p>Gender:{user.gender}</p>
     <h6>Email:{user.email}</h6>
+    <p>Attendance:{user.attendance}</p>
     <p>Password:{user.password}</p>
     <p>Address:{user.address}</p> 
 </div>

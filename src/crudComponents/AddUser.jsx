@@ -5,8 +5,11 @@ import '../App.css';
 function AddUser({UpdateUser,currentUser,index,Adduser}) {
   // console.log(currentUser);
 
-  const [user,setUser]=useState(currentUser?currentUser:{ name:'',
+  const [user,setUser]=useState(currentUser?currentUser:{ 
+    name:'',
+  gender:'',
   email:'',
+attendance:'',
   password:'',
   address:''})
 
@@ -38,7 +41,7 @@ const handlechange = (e)=>{
             <form className="row g-3" >
               <div className="col-md-6 d-flex gap-2 align-items-center">
                 <label htmlFor="inputName" className="form-label badge bg-secondary py-2 ">
-                  Name
+                  Name:
                 </label><br></br>
                 <input type="text" 
                 placeholder="Enter Name" className="form-control" id="inputName"
@@ -47,14 +50,23 @@ const handlechange = (e)=>{
               </div><br></br>
               <div className="col-md-6 d-flex gap-2">
                 <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
-                  Email
+                  Email:
                 </label><br></br>
+                
                 <input type="email"  placeholder="Enter Email" className="form-control" id="inputEmail4" 
                   name="email" value={user.email} onChange={handlechange} required />
               </div><br/>
               <div className="col-md-6 d-flex gap-2">
+                <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
+                  Attendance:
+                </label><br></br>
+                
+                <input type="att"  placeholder="Enter Attendance" className="form-control" id="inputatt" 
+                  name="attendance" value={user.attendance} onChange={handlechange} required />
+              </div><br/>
+              <div className="col-md-6 d-flex gap-2">
                 <label htmlFor="inputPassword4" className="form-label badge bg-secondary py-2">
-                  Password
+                  Password:
                 </label>
                 <input
                   type="password"
@@ -69,7 +81,7 @@ const handlechange = (e)=>{
               </div><br></br>
               <div className="col-12 d-flex gap-2">
                 <label htmlFor="inputAddress" className="form-label badge bg-secondary py-2">
-                  Address
+                  Address:
                 </label>
                 <input
                   type="text"

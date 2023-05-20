@@ -26,7 +26,10 @@ function HomePage({userList}) {
           {userList.map((user,index)=><div key={index} className="row text-start"  >
 <div>
 <h4 className='home_name'>{user.name}</h4> 
+<p>Gender:{user.gender}</p> 
     <h6>Email:{user.email}</h6> 
+     <p>Password:{user.password}</p> 
+    <p>Attendance:{user.attendance}</p> 
     <p>Password:{user.password}</p> 
     <p>Address:{user.address}</p> 
 </div>

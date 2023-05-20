@@ -32,12 +32,14 @@ function App() {
       name:'Radhika Suresh',
       gender:"Female",
       email:'radhikasuresh550@gmail.com',
+      attendance:"75%",
       password:'71898456',
       address:'No 12,Gandhi Nagar,Chennai-600026'
     },{
       name:'Ashwanth',
       gender:"Male",
       email:'Achu@gmail.com',
+      attendance:"86%",
       password:'38772456',
       address:'No 31,Shakthi Nagar,Chennai-600026'
     },
@@ -45,6 +47,7 @@ function App() {
       name:'Ashrad',
       gender:"Male",
       email:'Ashrd@gmail.com',
+      attendance:'84%',
       password:'71898456',
       address:'No 31,greek road,Chennai-600087'
     },
@@ -52,6 +55,7 @@ function App() {
       name:'Ashra',
       gender:"Female",
       email:'Ashra@gmail.com',
+      attendance:"79%",
       password:'76747893',
       address:'No 31,Besant Nagar,Chennai-600026',
     },
@@ -59,8 +63,17 @@ function App() {
       name:'Krithi',
       gender:"Female",
       email:'krithi@gmail.com',
+      attendance:"92%",
       password:'76747893',
       address:'No 31,Green road,Chennai-600029',
+    },
+    {
+      name:'John',
+      gender:"Male",
+      email:'john@gmail.com',
+      attendance:"77%",
+      password:'79947893',
+      address:'No 31,Kannan street,Chennai-600029',
     }
   ];
   
@@ -101,7 +114,7 @@ const UpdateUser=(updatedUser,id)=>{
       name:'Karthika',
       gender:"Female",
       batch:"B45WD",
-      Subject:"English",
+      subject:"English",
       email:'Karthika@gmail.com',
       password:'123445',
       address:'No 11/4,Ganga Nagar,Chennai-600032'
@@ -109,7 +122,7 @@ const UpdateUser=(updatedUser,id)=>{
       name:'Gowtham',
       gender:"Male",
       batch:"B43WD",
-      Subject:"Mathematics",
+      subject:"Mathematics",
       email:'Gowtham@gmail.com',
       password:'567890',
       address:'No 25,Lords Street,Chennai-600098'
@@ -118,7 +131,7 @@ const UpdateUser=(updatedUser,id)=>{
       name:'Navin',
       gender:"Male",
       batch:"B45WE",
-      Subject:"Computer Science",
+      subject:"Computer Science",
       email:'Navin@gmail.com',
       password:'718456',
       address:'No 1,greek colony,Chennai-600087'
@@ -127,7 +140,7 @@ const UpdateUser=(updatedUser,id)=>{
       name:'Ashwini',
       gender:"Female",
       batch:"B41WD",
-      Subject:"Biology",
+      subject:"Biology",
       email:'Ashwini@gmail.com',
       password:'767473',
       address:'No 20,Besant Nagar,Chennai-600067'
@@ -136,7 +149,7 @@ const UpdateUser=(updatedUser,id)=>{
       name:'John',
       gender:"Male",
       batch:"B41WD",
-      Subject:"French",
+      subject:"French",
       email:'john@gmail.com',
       password:'786473',
       address:'No 54,PG Apartments,Chennai-600098'

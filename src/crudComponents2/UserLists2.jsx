@@ -22,6 +22,7 @@ function UserLists2({userList2,DeleteUser2,EditUser2}) {
 <h4 className="home_name">{user2.name}</h4>
     <h6>Email:{user2.email}</h6>
       <p>Password:{user2.password}</p>
+      <p>Subject:{user2.subject}</p>
     <p>Batch:{user2.batch}</p>
     <p>Address:{user2.address}</p> 
 </div>

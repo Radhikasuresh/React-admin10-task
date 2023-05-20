@@ -25,11 +25,12 @@ function HomePage2({userList2}) {
 
           {userList2.map((user2,index2)=><div key={index2} className="row text-start"  >
 <div>
-<h4 className="home_name">{user2.name}</h4>&nbsp; &nbsp;
-    <h6 >Email:{user2.email}</h6>&nbsp; &nbsp;
-    <p>Password:{user2.password}</p>&nbsp; &nbsp;
-    <p>Password:{user2.batch}</p>&nbsp; &nbsp;
-    <p>Address:{user2.address}</p> &nbsp; &nbsp;
+<h4 className="home_name">{user2.name}</h4>
+    <h6 >Email:{user2.email}</h6>
+    <p>Password:{user2.password}</p>
+    <p>Subject:{user2.subject}</p>
+    <p>Batch:{user2.batch}</p>
+    <p>Address:{user2.address}</p> 
     </div>
 
 </div>)}
