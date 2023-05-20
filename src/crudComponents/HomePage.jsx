@@ -11,10 +11,10 @@ function HomePage({userList}) {
           </div>
           <div className="col col-sm-3 btn-group">
             <Link to="/adduser" className="btn btn-success">
-              AddUser
+              Add Student
             </Link>
             <Link to="/userlists" className="btn btn-info">
-              userList
+             Students List
             </Link>
           </div>
         </div>

@@ -11,8 +11,14 @@ function AddUser({UpdateUser,currentUser,index,Adduser}) {
   address:''})
 
 const handlechange = (e)=>{
-  setUser ({...user,[e.target.name]:e.target.value})
+  setUser (
+    {...user,[e.target.name]:e.target.value}
+    )
+  
+ 
+
 }
+
 
 
   return (

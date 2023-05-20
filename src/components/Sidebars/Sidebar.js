@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Collapse from 'react-bootstrap/Collapse';
+import './sidebar.css'
+
 
 const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,handleOpen1,handleOpen2,open,open1,open2,setOpen,
   setOpen1,setOpen2}) => {
@@ -74,7 +76,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
           onClick={handleOpen}
         >
           <i className="fas fa-fw fa-cog" style={{ marginRight: margin }}></i>
-          <span>School Info Tracker</span>
+          <span className='school'> School Info Tracker</span>
         </a>
         <Collapse in={open}>
         <div
