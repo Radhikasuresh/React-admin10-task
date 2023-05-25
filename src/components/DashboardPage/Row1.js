@@ -6,19 +6,19 @@ const Row1 = () => {
     {
       cardtype: 'card border-left-primary shadow h-100 py-2',
       textcolor: 'text-xs font-weight-bold text-primary text-uppercase mb-1',
-      heading: 'Total Students',
-      content: '125',
+      heading: 'Total Books',
+      content: '12520',
       progress: false,
-      icon:"fa fa-child fa-2x text-gray-300",
+      icon:"fa fa-book fa-4x",
      
     },
     {
       cardtype: 'card border-left-success shadow h-100 py-2',
       textcolor: 'text-xs font-weight-bold text-success text-uppercase mb-1',
-      heading: 'Total Teachers',
-      content: '15',
+      heading: 'Total Number of Category',
+      content: '125',
       progress: false,
-      icon:"fa fa-address-card fa-2x text-gray-300",
+      icon:"fa fa-building fa-4x" ,
 
     },
     {
@@ -33,8 +33,8 @@ const Row1 = () => {
     {
       cardtype: 'card border-left-warning shadow h-100 py-2',
       textcolor: 'text-xs font-weight-bold text-warning text-uppercase mb-1',
-      heading: ' Total Notice',
-      content: '18',
+      heading: ' Total Branch',
+      content: '8',
       progress: false,
       icon: 'fas fa-clipboard-list fa-2x text-gray-300',
     },

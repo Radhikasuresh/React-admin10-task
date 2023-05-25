@@ -42,7 +42,7 @@ const AreaChart = () => {
       ],
       datasets: [
         {
-          label: 'Performace of Students on Monthly Test in %',
+          label: 'Books issued and returned %',
           lineTension: 0.3,
           backgroundColor: 'rgba(78, 115, 223, 0.05)',
           borderColor: 'rgba(78, 115, 223, 1)',
@@ -60,8 +60,8 @@ const AreaChart = () => {
            80,
            70,
            90,
-           40,
-           50,
+           70,
+           80,
            70,
            75,
            90,

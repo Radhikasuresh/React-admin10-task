@@ -61,7 +61,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
       <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div className="sidebar-heading">School Information</div>
+      <div className="sidebar-heading">Library Information</div>
 
       {/* <!-- Nav Item - Pages Collapse Menu --> */}
       <li className="nav-item">
@@ -76,7 +76,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
           onClick={handleOpen}
         >
           <i className="fas fa-fw fa-cog" style={{ marginRight: margin }}></i>
-          <span className='school'> School Info Tracker</span>
+          <span className='school'> Library books Tracker</span>
         </a>
         <Collapse in={open}>
         <div
@@ -89,14 +89,14 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
             <h6 className="collapse-header">Information:</h6>
             <Link to="/Home" style={{ textDecoration: 'none' }}>
               <a className="collapse-item" href="buttons.html">
-                Students Tracking
+                Library Management 
               </a>
             </Link>
-            <Link to="/Home2" style={{ textDecoration: 'none' }}>
+            {/* <Link to="/Home2" style={{ textDecoration: 'none' }}>
               <a className="collapse-item" href="cards.html">
                 Teachers Tracking
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
         </Collapse>

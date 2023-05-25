@@ -1,28 +1,40 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import '../App.css';
+import * as yup from "yup";
+import { useFormik } from "formik";
 
-function AddUser({UpdateUser,currentUser,index,Adduser}) {
-  // console.log(currentUser);
+function AddUser({ UpdateUser, currentUser, index, Adduser }) {
+  const [userUpdate, setUserUpdate] = useState(false);
 
-  const [user,setUser]=useState(currentUser?currentUser:{ 
-    name:'',
-  gender:'',
-  email:'',
-attendance:'',
-  password:'',
-  address:''})
-
-const handlechange = (e)=>{
-  setUser (
-    {...user,[e.target.name]:e.target.value}
-    )
-  
- 
-
-}
-
-
+  const addFormData = useFormik({
+    initialValues: currentUser
+      ? currentUser
+      : {
+          bookname: "",
+          author: "",
+          year: "",
+          age: "",
+        },
+    validationSchema: yup.object({
+      bookname: yup.string().required("Bookname is required"),
+      author: yup.string().required("Author is required"),
+      // password: yup
+      //   .string()
+      //   .required("Email is required")
+      //   .min(6, "enter minimum 6 char")
+      //   .required("password is required"),
+      year:yup.string().required("Release year is required"),
+      age: yup.number().min(18).max(100).required("Age is required"),
+    }),
+    onSubmit: (userdata) => {
+      if (userUpdate) {
+        UpdateUser(userdata, index);
+      } else {
+        Adduser(userdata);
+      }
+      setUserUpdate(false);
+    },
+  });
 
   return (
     <>
@@ -38,72 +50,105 @@ const handlechange = (e)=>{
       <div className="container">
         <div className="row my-3">
           <div className="col">
-            <form className="row g-3" >
+            <form className="row g-3">
               <div className="col-md-6 d-flex gap-2 align-items-center">
-                <label htmlFor="inputName" className="form-label badge bg-secondary py-2 ">
-                  Name:
-                </label><br></br>
-                <input type="text" 
-                placeholder="Enter Name" className="form-control" id="inputName"
-                name="name" value={user.name} onChange={handlechange} required />
-              
-              </div><br></br>
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
-                  Email:
-                </label><br></br>
-                
-                <input type="email"  placeholder="Enter Email" className="form-control" id="inputEmail4" 
-                  name="email" value={user.email} onChange={handlechange} required />
-              </div><br/>
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputEmail4" className="form-label badge bg-secondary py-2">
-                  Attendance:
-                </label><br></br>
-                
-                <input type="att"  placeholder="Enter Attendance" className="form-control" id="inputatt" 
-                  name="attendance" value={user.attendance} onChange={handlechange} required />
-              </div><br/>
-              <div className="col-md-6 d-flex gap-2">
-                <label htmlFor="inputPassword4" className="form-label badge bg-secondary py-2">
-                  Password:
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="inputPassword4"
-                  name="password"
-                  placeholder="Enter Password"
-                  value={user.password}
-                  onChange={handlechange}
-                  required
-                />
-              </div><br></br>
-              <div className="col-12 d-flex gap-2">
-                <label htmlFor="inputAddress" className="form-label badge bg-secondary py-2">
-                  Address:
+                <label
+                  htmlFor="username"
+                  className="form-label badge bg-secondary py-2 "
+                >
+                  Book Name:
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="inputAddress"
-                  placeholder="Enter the Address"
-                  name="address"
-                  value={user.address}
-                  onChange={handlechange}
+                  id="bookname"
+                  name="bookname"
+                  placeholder="Enter bookname"
+                  value={addFormData.values.bookname}
+                  onChange={addFormData.handleChange}
+                  required
+                />
+              </div>
+              <div className="col-md-6 d-flex gap-2">
+                <label
+                  htmlFor="inputEmail4"
+                  className="form-label badge bg-secondary py-2"
+                >
+                Author Name:
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="author"
+                  name="author"
+                  placeholder="Enter author name"
+                  value={addFormData.values.author}
+                  onChange={addFormData.handleChange}
+                  required
+                />
+              </div>
+              <div className="col-md-6 d-flex gap-2">
+                <label
+                  htmlFor="inputPassword4"
+                  className="form-label badge bg-secondary py-2"
+                >
+                Release Year:
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="year"
+                  name="year"
+                  placeholder="Enter release year"
+                  value={addFormData.values.year}
+                  onChange={addFormData.handleChange}
+                  required
+                />
+              </div>
+              <div className="col-12 d-flex gap-2">
+                <label
+                  htmlFor="inputAge"
+                  className="form-label badge bg-secondary py-2"
+                >
+                  Age:
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="age"
+                  placeholder="Enter age"
+                  name="age"
+                  value={addFormData.values.age}
+                  onChange={addFormData.handleChange}
                 />
               </div>
 
               <div className="col-3 mx-auto btn-group">
-                <button onClick={(e)=>{ e.preventDefault();Adduser(user);}}
-                 className="btn btn-primary">
+                <button
+                 type="submit"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addFormData.handleSubmit();
+                  }}
+                  className="btn btn-primary"
+                >
                   ADD
                 </button>
-                
-               { currentUser?
-                <button className="btn btn-warning" onClick={(e)=>{e.preventDefault();UpdateUser(user,index);}}>
-                  Update
-                </button>:<></>}
+                {currentUser ? (
+                  <button
+                    className="btn btn-warning"
+                    type="submit"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setUserUpdate(true);
+                      addFormData.handleSubmit();
+                    }}
+                  >
+                    Update
+                  </button>
+                ) : (
+                  <></>
+                )}
               </div>
             </form>
           </div>

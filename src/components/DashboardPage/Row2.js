@@ -11,7 +11,7 @@ const Row2 = () => {
           {/* <!-- Card Header - Dropdown --> */}
           <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 className="m-0 font-weight-bold text-primary">
-             Monthly Test Growth
+             Books sold and re-stocked
             </h6>
             <div className="dropdown no-arrow">
               <a
@@ -58,7 +58,7 @@ const Row2 = () => {
           {/* <!-- Card Header - Dropdown --> */}
           <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 className="m-0 font-weight-bold text-primary">
-             Students Examination Results
+            Books in Library
             </h6>
             <div className="dropdown no-arrow">
               <a

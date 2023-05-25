@@ -19,12 +19,10 @@ function UserLists({userList,DeleteUser,EditUser}) {
             <div className="col">
 {userList.map((user,index)=><div key={index} className="row">
 <div className="col text-start">
-<h4 className="home_name">{user.name}</h4>
-<p>Gender:{user.gender}</p>
-    <h6>Email:{user.email}</h6>
-    <p>Attendance:{user.attendance}</p>
-    <p>Password:{user.password}</p>
-    <p>Address:{user.address}</p> 
+<h4>{user.bookname}</h4>
+    <h6>Author Name:{user.author}</h6>
+    <p>Release Year:{user.year}</p>
+    <p>Age:{user.age}</p> 
 </div>
 <div className="col my-auto">
     <div className=" btn-group ">

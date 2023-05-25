@@ -5,7 +5,7 @@ import ProgressCard from '../ComponentsPage/CardsPage/ProgressCard'
 const Row3 = () => {
   const ProgressData = [
     {
-      content: 'No.Of Failers',
+      content: 'No.Of Books Yet to be re-stocked',
       percentage: '15%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-danger',
@@ -13,7 +13,7 @@ const Row3 = () => {
       ariavalue: '20',
     },
     {
-      content: 'Irregular Attendance',
+      content: 'Books ordered',
       percentage: '40%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-warning',
@@ -21,7 +21,7 @@ const Row3 = () => {
       ariavalue: '40',
     },
     {
-      content: 'Pass Percentage',
+      content: 'No.of Books not returned',
       percentage: '60%',
       cardType: 'progress mb-4',
       barType: 'progress-bar',
@@ -29,7 +29,7 @@ const Row3 = () => {
       ariavalue: '60',
     },
     {
-      content: 'Regular Attendance',
+      content: 'No.of Books issued',
       percentage: '80%',
       cardType: 'progress mb-4',
       barType: 'progress-bar bg-info',
@@ -37,7 +37,7 @@ const Row3 = () => {
       ariavalue: '80',
     },
     {
-      content: 'Assignment Submitted',
+      content: 'No.of Books returned',
       percentage: 'Complete!',
       cardType: 'progress',
       barType: 'progress-bar bg-success',
@@ -49,49 +49,49 @@ const Row3 = () => {
     {
       cardType: 'card bg-primary text-white shadow',
       cardHeading: 'English',
-      content: 'Pass Percentage:85%',
+      content: '85%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-success text-white shadow',
       cardHeading: 'Mathematics',
-      content: 'Pass Percentage:75%',
+      content: '75%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-info text-white shadow',
-      cardHeading: 'Chemistry',
-      content: 'Pass Percentage:80%',
+      cardHeading: 'Polity',
+      content: '80%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-warning text-white shadow',
-      cardHeading: 'Physics',
-      content: 'Pass Percentage:90%',
+      cardHeading: 'Economics',
+      content: '90%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-danger text-white shadow',
       cardHeading: 'History',
-      content: 'Pass Percentage:70%',
+      content: '70%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-secondary text-white shadow',
       cardHeading: 'French',
-      content: 'Pass Percentage:95%',
+      content: '55%',
       textColor: 'text-white-50 small',
     },
     {
       cardType: 'card bg-light text-black shadow',
       cardHeading: 'Computer Science',
-      content: 'Pass Percentage:90%',
+      content: '90%',
       textColor: 'text-black-50 small',
     },
     {
       cardType: 'card bg-dark text-white shadow',
       cardHeading: 'Biology',
-      content: 'Pass Percentage:85%',
+      content: '85%',
       textColor: 'text-white-50 small',
     },
   ]
@@ -145,7 +145,7 @@ const Row3 = () => {
                 alt="..."
               />
             </div>
-            <p>Education helps a person to get knowledge and improve confidence in life. It can help you improve your career and your personal growth. An educated person can become a great citizen in society.
+            <p>A library is a collection of materials, books or media that are accessible for use and not just for display purposes. A library provides physical (hard copies) or digital access (soft copies) materials, and may be a physical location or a virtual space, or both. A library's collection can include printed materials and other physical resources in many formats such as DVD, CD and cassette as well as access to information, music or other content held on bibliographic databases.
             </p>
            
           </div>
@@ -155,16 +155,15 @@ const Row3 = () => {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-primary">
-              Knowledge 0Cw
-              Development Approach
+             Importance of Library
             </h6>
           </div>
           <div className="card-body">
             <p>
-            They say knowledge is power. Think about it: Your current mentors and the senior leaders you regularly interact with at work likely have a vast knowledge of your company’s products and services and their field of work, and they might even keep up to date with general industry news. The world’s most successful people find ways to incorporate learning into their day-to-day work. 
+            Libraries offer free education and entertainment to the masses which can be a student, a work professional or a common person of a community. It doesn't matter what your economic status is, you can come in and have free access to books that can inform and transform you. Though the use of school/college and research libraries is limited only to the students of that particular school/college but state and community libraries are open for all and anyone can avail the benefits of these during working hours.
             </p>
             <p className="mb-0">
-            The ability to acquire knowledge effectively is a skill in itself. It’s the key to opening doors that would otherwise be locked and often controls access to opportunity and advancement in the workplace. 
+            A good modern library usually subscribes to practically all the important newspapers and periodicals so that these are made available to all those interested in these information sources.
             </p>
           </div>
         </div>

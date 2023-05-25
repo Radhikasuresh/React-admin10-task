@@ -18,10 +18,6 @@ ChartJS.register(
     Legend
   )
 
-// // Set new default font family and font color to mimic Bootstrap's default styling
-// Chart.defaults.global.defaultFontFamily = 'Nunito'
-// Chart.defaults.global.defaultFontColor = '#858796'
-
 const DonutChart = () => {
   const data = {
     labels: ['Above 90%', '75% to 90%', 'Below 75%'],
