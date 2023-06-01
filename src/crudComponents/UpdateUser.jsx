@@ -65,6 +65,7 @@ function UpdateUser({ Updateuser, currentUser, index, Adduser }) {
                 </label>
                 <input
                   type="text"
+                  placeholder="Enter Bookname"
                   className="form-control"
                   id="bookname"
                   name="bookname"
@@ -83,6 +84,7 @@ function UpdateUser({ Updateuser, currentUser, index, Adduser }) {
                 </label>
                 <input
                   type="text"
+                  placeholder="Enter Author name"
                   className="form-control"
                   id="author"
                   name="author"
@@ -105,6 +107,7 @@ function UpdateUser({ Updateuser, currentUser, index, Adduser }) {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="Enter Release Year"
                   id="year"
                   name="year"
                   value={addFormData.values.year}

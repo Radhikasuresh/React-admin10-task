@@ -66,6 +66,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="Enter Bookname"
                   id="bookname"
                   name="bookname"
                   value={addFormData.values.bookname}
@@ -84,6 +85,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="Enter Author name"
                   id="author"
                   name="author"
                   value={addFormData.values.author}
@@ -105,6 +107,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="Enter Release Year"
                   id="year"
                   name="year"
                   value={addFormData.values.year}
@@ -124,7 +127,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                   type="number"
                   className="form-control"
                   id="inputAge"
-                  placeholder="25"
+                  placeholder="Enter Age"
                   name="age"
                   value={addFormData.values.age}
                   onChange={addFormData.handleChange}
