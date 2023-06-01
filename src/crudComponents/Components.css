@@ -1,4 +1,5 @@
-#landing_page{
+/* #landing_page{
+  
     background-position-x: center; 
     background-position-y:bottom;
     background-repeat: no-repeat;
@@ -6,4 +7,22 @@
     background-size:cover;
     height: 100vh; 
 
+
+} */
+#register_page{
+    height: 100vh;
 }
+#register_page img{
+    height: 100vh;
+}
+#login_page{
+    height: 100vh;
+}
+#login_page img{
+    height: 100vh;
+}
+.login-button{
+    margin: 500px;
+  }
+
+

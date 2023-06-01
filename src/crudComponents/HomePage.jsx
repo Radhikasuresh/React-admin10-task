@@ -2,20 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 function HomePage({userList}) {
   console.log(userList);
-  
   return (
     <>
       <div className="container-fluid p-3 bg-dark text-white" id="adduser">
         <div className="row">
           <div className="col col-sm-4 text-danger">
-            <span className="fs-3 fw-bold bg-white rounded-circle px-2">R</span>
+            <span className="fs-3 fw-bold bg-white rounded-circle px-2">Library Management</span>
           </div>
           <div className="col col-sm-3 btn-group">
             <Link to="/adduser" className="btn btn-success">
-              AddUser
+              Add Books
             </Link>
             <Link to="/userlists" className="btn btn-info">
-              userList
+              Books List
             </Link>
           </div>
           <div className="col col-sm-3 ms-auto">
@@ -32,10 +31,10 @@ function HomePage({userList}) {
 
           {userList.map((user,index)=><div key={index} className="row text-start"  >
 <div>
-<h4>{user.bookname}</h4>
-    <h6>Author Name:{user.author}</h6>
-    <p>Release Year:{user.year}</p>
-    <p>Age:{user.age}</p> 
+<h4 className="contentname">{user.bookname}</h4>
+    <h6 ><span className="bookname">Author:</span>{user.author}</h6>
+    <p><span className="bookname">Release Year:</span>{user.year}</p>
+    <p><span className="bookname">Age:</span>{user.age}</p> 
     </div>
 
 

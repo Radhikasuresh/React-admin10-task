@@ -87,7 +87,7 @@ const Sidebar = ({ sidebarToggle, setSidebarToggle, handleSidebar,handleOpen,han
         >
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">Information:</h6>
-            <Link to="/Home" style={{ textDecoration: 'none' }}>
+            <Link to="/landingPage" style={{ textDecoration: 'none' }}>
               <a className="collapse-item" href="buttons.html">
                 Library Management 
               </a>

@@ -88,5 +88,39 @@ color:white;
   background-color: red;
 }
 .bookname{
-  color:tomato
+  color:tomato;
+  font-weight: bold;
 }
+.contentname{
+  color:black;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.content{
+  color:rgba(15, 153, 15, 0.781);
+  font-weight: bold;
+}
+.register{
+  margin-left: 580px;
+}
+.register1{
+  margin-left: 500px;
+  color:black;
+  text-shadow: 1px 2px 5px blue;
+}
+.main{
+  padding-top: 200px;
+}
+.big-box{
+  background-image: linear-gradient(to right,rgb(224, 161, 226),rgb(255, 223, 251));
+}
+#landing_page{
+   background-position-x: center; 
+  background-position-y:bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  height: 100vh; 
+}
+
+

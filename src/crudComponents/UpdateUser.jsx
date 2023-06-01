@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 
-function AddUser({ UpdateUser, currentUser, index, Adduser }) {
+function UpdateUser({ Updateuser, currentUser, index, Adduser }) {
   const [userUpdate, setUserUpdate] = useState(false);
   const navigate = useNavigate();
   const addFormData = useFormik({
@@ -32,7 +32,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
       navigate('/login1')
 
       if (userUpdate) {
-        UpdateUser(userdata, index);
+        Updateuser(userdata, index);
       } else {
         Adduser(userdata);
       }
@@ -124,7 +124,7 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                   type="number"
                   className="form-control"
                   id="inputAge"
-                  placeholder="25"
+                  placeholder="Enter Age"
                   name="age"
                   value={addFormData.values.age}
                   onChange={addFormData.handleChange}
@@ -134,19 +134,22 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
                         {addFormData.errors.age ? <div className='text-danger'>{addFormData.errors.age}</div> : <></>}
 
               <div className="col-3 mx-auto btn-group">
-                <button
-                type="submit"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    addFormData.handleSubmit();
-                  }}
-                  className="btn btn-primary"
-                >
-                  ADD
-                </button>
-               
-             
-           
+              
+                {currentUser ? (
+                  <button
+                  type="submit"
+                    className="btn btn-warning"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setUserUpdate(true);
+                      addFormData.handleSubmit();
+                    }}
+                  >
+                    Update
+                  </button>
+                ) : (
+                  <></>
+                )}
               </div>
             </form>
           </div>
@@ -156,4 +159,4 @@ function AddUser({ UpdateUser, currentUser, index, Adduser }) {
   );
 }
 
-export default AddUser;
+export default UpdateUser;

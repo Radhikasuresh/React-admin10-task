@@ -19,14 +19,13 @@ import AddUser from './crudComponents/AddUser';
 import UserLists from './crudComponents/UserLists';
 import HomePage from './crudComponents/HomePage';
 import LandingPage from './crudComponents/LandingPage';
-
-// import AddUser2 from './crudComponents2/AddUser2';
-// import UserLists2 from './crudComponents2/UserLists2';
-// import HomePage2 from './crudComponents2/HomePage2';
-// import LandingPage2 from './crudComponents2/LandingPage2';
+import Register1 from './crudComponents/Register1';
+import Login1 from './crudComponents/Login1';
+import UpdateUser from './crudComponents/UpdateUser';
 
 function App() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
   const user  = [
     {
     bookname:'The India Story',
@@ -59,136 +58,89 @@ function App() {
     }
     
   ];
-
-  // const user  = [
-  //     {
-  //       username:"Radika",
-  //     email:'abc@gmail.com',
-  //     password:'Bimal Jalal',
-  //     age:45,
-  //     }]
-
-  
-  
-
-
-  const [userList,setUserList]=useState([...user])
-  const [currentUser,setCurrentUser]=useState()
-  const [index,setIndex]=useState()
-const EditUser = (user,index)=>{
-  setCurrentUser(user)
-  setIndex(index)
-  console.log(user);
-  navigate('/adduser')
-
-}
-
-const UpdateUser=(updatedUser,id)=>{
-  console.log(updatedUser);
-  const UserList = [...userList]
-  console.log(id);
-  UserList[id] ={...updatedUser}
-   setUserList([...UserList])
-   console.log(setUserList)
-   alert("user updated");
-   <Link to="/home"/>
-};
-  const Adduser=(user)=>{
-    
-    setUserList([...userList,user])
-    //console.log(userList);
-    console.log(setUserList)
-    alert("user added");
-    <Link to="/home"/>
-          
+  const [userList, setUserList] = useState([...user]);
+  const [currentUser, setCurrentUser] = useState();
+  const [index, setIndex] = useState();
+  const EditUser = (user, index) => {
+    setCurrentUser(user);
+    setIndex(index);
+    console.log(user);
+    navigate("/updateuser");
    
   };
-  const DeleteUser=(id)=>{
-   const UserList = [...userList]
-    const newUser=UserList.filter((user,index)=>index!==id)
-    setUserList(newUser)
 
+  const Updateuser = (updatedUser, id) => {
+    const UserList = [...userList];
+    console.log(id);
+    UserList[id] = { ...updatedUser };
+    setUserList([...UserList]);
+    alert("user updated");
+    navigate('/userlists')
   };
-//   const user2  = [
-//     {
-//       name:'Karthika',
-//       gender:"Female",
-//       batch:"B45WD",
-//       subject:"English",
-//       email:'Karthika@gmail.com',
-//       password:'123445',
-//       address:'No 11/4,Ganga Nagar,Chennai-600032'
-//     },{
-//       name:'Gowtham',
-//       gender:"Male",
-//       batch:"B43WD",
-//       subject:"Mathematics",
-//       email:'Gowtham@gmail.com',
-//       password:'567890',
-//       address:'No 25,Lords Street,Chennai-600098'
-//     },
-//     {
-//       name:'Navin',
-//       gender:"Male",
-//       batch:"B45WE",
-//       subject:"Computer Science",
-//       email:'Navin@gmail.com',
-//       password:'718456',
-//       address:'No 1,greek colony,Chennai-600087'
-//     },
-//     {
-//       name:'Ashwini',
-//       gender:"Female",
-//       batch:"B41WD",
-//       subject:"Biology",
-//       email:'Ashwini@gmail.com',
-//       password:'767473',
-//       address:'No 20,Besant Nagar,Chennai-600067'
-//     },
-//     {
-//       name:'John',
-//       gender:"Male",
-//       batch:"B41WD",
-//       subject:"French",
-//       email:'john@gmail.com',
-//       password:'786473',
-//       address:'No 54,PG Apartments,Chennai-600098'
-//     }
-//   ];
+  const Adduser = (user) => {
+    setUserList([...userList, user]);
+    alert("user added");
+    navigate('/userlists')
+  };
+  const DeleteUser = (id) => {
+    const UserList = [...userList];
+    const newUser = UserList.filter((user, index) => index !== id);
+    setUserList(newUser);
+  };
+
+//   const navigate=useNavigate()
+  
+
+//   // const user  = [
+//   //     {
+//   //       username:"Radika",
+//   //     email:'abc@gmail.com',
+//   //     password:'Bimal Jalal',
+//   //     age:45,
+//   //     }]
+
+  
+  
 
 
-//   const [userList2,setUserList2]=useState([...user2])
-//   const [currentUser2,setCurrentUser2]=useState()
-//   const [index2,setIndex2]=useState()
-// const EditUser2 = (user2,index2)=>{
-//   setCurrentUser2(user2)
-//   setIndex2(index2)
-//   console.log(user2);
-//   navigate('/adduser2')
+//   const [userList,setUserList]=useState([...user])
+//   const [currentUser,setCurrentUser]=useState()
+//   const [index,setIndex]=useState()
+// const EditUser = (user,index)=>{
+//   setCurrentUser(user)
+//   setIndex(index)
+//   console.log(user);
+//   navigate('/adduser')
 
 // }
 
-// const UpdateUser2=(updatedUser2,id)=>{
-//   console.log(updatedUser2);
-//   const UserList2 = [...userList2]
+// const UpdateUser=(updatedUser,id)=>{
+//   console.log(updatedUser);
+//   const UserList = [...userList]
 //   console.log(id);
-//   UserList2[id] ={...updatedUser2}
-//    setUserList2([...UserList2])
+//   UserList[id] ={...updatedUser}
+//    setUserList([...UserList])
+//    console.log(setUserList)
+//    alert("user updated");
+//    //<Link to="/home"/>
+  
 
 // };
-//   const Adduser2=(user2)=>{
-//     setUserList2([...userList2,user2])
-//     console.log(userList2);
+//   const Adduser=(user)=>{
+    
+//     setUserList([...userList,user])
+//     //console.log(userList);
+//     console.log(setUserList)
+//     alert("user added");
+//     //<Link to="/home"/>
 //   };
-//   const DeleteUser2=(id)=>{
-//    const UserList2 = [...userList2]
-//     const newUser2=UserList2.filter((user2,index2)=>index2!==id)
-//     setUserList2(newUser2)
+//   const DeleteUser=(id)=>{
+//    const UserList = [...userList]
+//     const newUser=UserList.filter((user,index)=>index!==id)
+//     setUserList(newUser)
 
 //   };
-
-
-  const [open, setOpen] = useState(false);
+ const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [students,setStudents]=useState([])
@@ -207,18 +159,11 @@ const UpdateUser=(updatedUser,id)=>{
   return (
     <div>
       <Routes>
-        {/* <Route path="/" element={<Dashboard open={open} setOpen={setOpen} handleOpen={handleOpen} open1={open1}
+      <Route path="/" element={<Dashboard open={open} setOpen={setOpen} handleOpen={handleOpen} open1={open1}
           setOpen1={setOpen1} handleOpen1={handleOpen1} open2={open2} setOpen2={setOpen2} handleOpen2={handleOpen2}/>} />
-          
-           
-
-            <Route path="/LandingPage" element={<LandingPage/>}/>
-      <Route path="/home" element={<HomePage userList={userList} />}/>
-      <Route path="/adduser" element={<AddUser currentUser={currentUser} index={index} UpdateUser={UpdateUser} Adduser={Adduser}/>}/>
-      <Route path="/userlists" element={<UserLists EditUser={EditUser} userList={userList} index DeleteUser={DeleteUser} />}/> */}
-<Route path="/landingpage" element={<LandingPage />} />
-        <Route path="/bookregister" element={<Register Adduser={Adduser} />} />
-        <Route path="/booklogin" element={<Login userList={userList} />} />
+      <Route path="/landingPage" element={<LandingPage />} />
+        <Route path="/register1" element={<Register1 Adduser={Adduser} />} />
+        <Route path="/login1" element={<Login1 userList={userList} />} />
         <Route path="/home" element={<HomePage userList={userList} />} />
         <Route
           path="/adduser"
@@ -226,25 +171,34 @@ const UpdateUser=(updatedUser,id)=>{
             <AddUser
               currentUser={currentUser}
               index={index}
-              UpdateUser={UpdateUser}
+              Updateuser={Updateuser}
               Adduser={Adduser}
             />
           }
         />
-         <Route
+        <Route
           path="/updateuser"
           element={
             <UpdateUser
               currentUser={currentUser}
               index={index}
-              UpdateUser={UpdateUser}
+              Updateuser={Updateuser}
               Adduser={Adduser}
             />
           }
         />
-               
-
-      {/* <Route path="/LandingPage2" element={<LandingPage2/>}/>
+        <Route
+          path="/userlists"
+          element={
+            <UserLists
+              EditUser={EditUser}
+              userList={userList}
+              index
+              DeleteUser={DeleteUser}
+            />
+          }
+        />
+         {/* <Route path="/LandingPage2" element={<LandingPage2/>}/>
       <Route path="/home2" element={<HomePage2 userList2={userList2} />}/>
       <Route path="/adduser2" element={<AddUser2 currentUser2={currentUser2} index2={index2} UpdateUser2={UpdateUser2} Adduser2={Adduser2}/>}/>
       <Route path="/userlists2" element={<UserLists2 EditUser2={EditUser2} userList2={userList2} index2 DeleteUser2={DeleteUser2} />}/>

@@ -19,15 +19,15 @@ function UserLists({userList,DeleteUser,EditUser}) {
             <div className="col">
 {userList.map((user,index)=><div key={index} className="row">
 <div className="col text-start">
-<h4>{user.bookname}</h4>
-    <h6>Author Name:{user.author}</h6>
-    <p>Release Year:{user.year}</p>
-    <p>Age:{user.age}</p> 
+<h4 className="contentname">{user.bookname}</h4>
+    <h6 ><span className="bookname">Author:</span>{user.author}</h6>
+    <p><span className="bookname">Release Year:</span>{user.year}</p>
+    <p><span className="bookname">Age:</span>{user.age}</p> 
 </div>
 <div className="col my-auto">
     <div className=" btn-group ">
-    <button className="btn btn-warning" onClick={()=>EditUser(user,index)}>Edit</button>
-<button className="btn btn-danger" onClick={()=>DeleteUser(index)}>delete</button>
+    <button className="btn btn-warning" onClick={()=>EditUser(user,index)}>Edit Book</button>
+<button className="btn btn-danger" onClick={()=>DeleteUser(index)}>Delete Book</button>
     </div>
 
 </div>
