@@ -18,7 +18,7 @@ function HomePage({userList}) {
             </Link>
           </div>
           <div className="col col-sm-3 ms-auto">
-          <Link to="/login" className="btn btn-danger">
+          <Link to="/login1" className="btn btn-danger">
               Logout
             </Link>
           </div>
